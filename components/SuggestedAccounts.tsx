@@ -7,10 +7,10 @@ import { IUser } from '../types'
 import { BASE_URL } from '../utils'
 
 const SuggestedAccounts = () => {
+  const {fetchAllUsers,allUsers}=useAuthStore()
   useEffect(() => {
     fetchAllUsers()
-  }, [])
-  const {fetchAllUsers,allUsers}=useAuthStore()
+  }, [fetchAllUsers])
   
 
   

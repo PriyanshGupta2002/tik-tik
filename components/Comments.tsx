@@ -35,7 +35,7 @@ const Comments = ({
       <div className="overflow-scroll lg:h-[475px]">
         {comments?.length ? (
           comments.map((item, idx) => (
-            <Fragment>
+            <Fragment key={idx}>
               {allUsers.map(
                 (user: IUser) =>
                   user._id === (item.postedBy._id || item.postedBy._ref) && (
