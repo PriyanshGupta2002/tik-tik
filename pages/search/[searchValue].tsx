@@ -12,7 +12,7 @@ import useAuthStore from '../../store/authStore'
 interface Iprops{
     videos:Video[]
 }
-const search = ({videos}:Iprops) => {
+const Search = ({videos}:Iprops) => {
     const router = useRouter()
     const {searchValue}:any=router.query
     const {allUsers}=useAuthStore()
@@ -72,4 +72,4 @@ export const getServerSideProps=async({params:{searchValue}}:{
     }
   }
   }
-export default search
+export default Search

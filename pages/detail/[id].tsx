@@ -16,7 +16,7 @@ import LikeButton from "../../components/LikeButton";
 interface IProps {
   postDetails: Video;
 }
-const details = ({ postDetails }: IProps) => {
+const Details = ({ postDetails }: IProps) => {
   const [post, setpost] = useState(postDetails);
   const {userProfile}:any=useAuthStore()
   const router = useRouter();
@@ -177,4 +177,4 @@ export const getServerSideProps = async ({
     },
   };
 };
-export default details;
+export default Details;
