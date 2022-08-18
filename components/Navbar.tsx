@@ -1,7 +1,7 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Router, useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import {AiOutlineLogout} from 'react-icons/ai'
 import {BiSearch} from 'react-icons/bi'
 import {IoMdAdd} from 'react-icons/io'
@@ -10,7 +10,7 @@ import Logo from '../utils/tiktik-logo.png'
 import { createOrGetUser } from '../utils'
 import useAuthStore from '../store/authStore'
 const Navbar = () => {
-  const {addUser,userProfile,removeUser}  = useAuthStore()
+  const {addUser,userProfile,removeUser}:any  = useAuthStore()
   const router = useRouter()
   const handleLogout=()=>{
     googleLogout()
